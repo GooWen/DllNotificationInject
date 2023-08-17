@@ -68,6 +68,7 @@ int main(int argc, char* argv[])
 	if (!lpRemoteShellcode || !lpRemoteEntry || !lpRemoteStub)
 	{
 		printf("Allocate remote memory failed");
+		exit(2);
 	}
 
 	memcpy(hexData + 2, &entry, sizeof LPVOID);
